@@ -5,7 +5,7 @@ import MainChat from '../components/chatRoom/mainchat';
 import Footer from '../components/common/footer';
 
 
-const Home = () => {
+export default function ChatRoom() {
     return (
         <>
             <Header />
@@ -16,4 +16,3 @@ const Home = () => {
 
 }
 
-export default Home

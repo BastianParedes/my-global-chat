@@ -1,16 +1,15 @@
 
 import Header from '../components/common/header';
-import Index from '../components/index/index';
+import IndexContent from '../components/index';
 import Footer from '../components/common/footer';
 
-const Home = () => {
+export default function Index() {
     return (
         <>
             <Header />
-            <Index />
+            <IndexContent />
             <Footer />
         </>
     );
 }
 
-export default Home;
