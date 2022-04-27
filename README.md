@@ -1,3 +1,3 @@
-# [My global chat](https://bastianparedes.com/)
+# [My global chat](https://my-global-chat.vercel.app/)
 
-Este es mi portafolio, puedes visitarlo haciendo click [aquí](https://bastianparedes.com/)
+Este es mi portafolio, puedes visitarlo haciendo click [aquí](https://my-global-chat.vercel.app/)
