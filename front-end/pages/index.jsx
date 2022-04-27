@@ -1,20 +1,16 @@
 
-import type { NextPage } from 'next';
-
 import Header from '../components/common/header';
-import MainChat from '../components/chatRoom/mainchat';
+import Index from '../components/index/index';
 import Footer from '../components/common/footer';
 
-
-const Home: NextPage = () => {
+const Home = () => {
     return (
         <>
             <Header />
-            <MainChat />
+            <Index />
             <Footer />
         </>
     );
-
 }
 
-export default Home
+export default Home;

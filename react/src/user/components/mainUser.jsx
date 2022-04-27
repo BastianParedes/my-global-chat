@@ -1,7 +1,7 @@
 import React from "react";
-import styles from './styles.module.css';
+import '../styles/user.css';
 
-export default function Index(props:any) {
+export default function MainUser(props) {
 
     let username = React.useRef('');
 
@@ -15,10 +15,10 @@ export default function Index(props:any) {
         };
     
         sessionStorage.setItem('username', username.current);
-        location.pathname = '/chatRoom';
+        props.changePage();
     }
 
-    let onKeyDown = (event:any) => {
+    let onKeyDown = (event) => {
         if (event.keyCode === 13) {
             event.preventDefault();
             goToChat();
@@ -27,11 +27,11 @@ export default function Index(props:any) {
     
 
     return (
-        <main className={styles["main"]}>
-            <div className={styles["container"]}>
-                <h2 className={styles["username-tittle"]}>Nombre de usuario</h2>
-                <input type="text" className={styles["username-ipnut"]} maxLength={14} onKeyDown={onKeyDown} onChange={(event) => username.current = event.target.value}/>
-                <button className={styles["username-btn"]} onClick={goToChat}>Ir al chat</button>
+        <main>
+            <div className="container">
+                <h2 className="username-tittle">Nombre de usuario</h2>
+                <input type="text" className="username-ipnut" maxLength="14" onKeyDown={onKeyDown} onChange={(event) => username.current = event.target.value}/>
+                <button className="username-btn" onClick={goToChat}>Ir al chat</button>
             </div>
         </main>
     );

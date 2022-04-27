@@ -1,0 +1,148 @@
+
+
+main {
+    background-color: rgb(68, 71, 255);
+    background-image: url('../../general/images/background.jpg');
+    height: 91%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.messages-section {
+    height: 70%;
+    width: 80%;
+    background-color: rgb(190, 225, 255);
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+
+
+
+.message-div {
+    background-color: rgb(23, 162, 255);
+    width: fit-content;
+    max-width: 80%;
+    display: flex;
+    margin: 0.625rem;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+
+.recieved-message {
+    margin-right: auto;
+}
+
+.sended-message {
+    margin-left: auto;
+}
+
+
+
+
+.container-message-text-in-chat {
+    height: 100%;
+    width: fit-content;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+.message-username {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.message-content {
+    color: rgb(255, 255, 255)
+}
+
+.container-message-hour {
+    margin-top: auto;
+    font-size: 1.6rem;
+    margin-left: 0.625rem;
+}
+
+.message-hour {
+    color: rgb(209, 209, 209)
+}
+
+
+
+
+
+
+.send-messages-section {
+    position: relative;
+    height: 10%;
+    width: 80%;
+    max-height: 10%;
+    max-width: 80%;
+    border: 0.0625rem solid rgb(0, 0, 0);
+    margin-top: 0.625rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sending-text {
+    height: 100%;
+    flex: 1;
+    resize: none;
+    border: none;
+    margin: 0;
+    padding: 0 0.3125rem;
+    font-size: 2.5rem;
+    
+}
+
+
+.send-text-btn {
+    position: relative;
+    height: 100%;
+    width: fit-content;
+    object-fit: cover;
+    border-style: none none none solid;
+    border-width: 0.0625rem;
+    display: flex;
+    align-items: center;
+    font-size: 4rem;
+}
+
+.send-text-btn:hover {
+    background-color: rgb(207, 207, 207);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media (max-device-width: 700px) {
+    main {
+        background-color: rgb(190, 225, 255);
+    }
+    .messages-section {
+        height: 98%;
+        width: 98%;
+        margin: 0.625rem;
+    }
+
+    .send-messages-section {
+        height: 10%;
+        width: 98%;
+        max-width: 100%;
+        margin: 0.625rem;
+    }
+}
+

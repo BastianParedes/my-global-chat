@@ -1,7 +1,7 @@
 
 import styles from './styles.module.css';
 
-export default function Message(props: any) {
+export default function Message(props) {
     let date = new Date();
     let currentHour = date.getHours();
     let hour = currentHour <= 9 ?  '0' + currentHour : currentHour;

@@ -4,7 +4,7 @@ import '/public/styles/styles.css';
 import React from 'react';
 import Head from 'next/head';
 
-export default function MyApp({ Component, pageProps }: any) {
+export default function MyApp({ Component, pageProps }) {
     return (
         <React.StrictMode>
                 <Head>
