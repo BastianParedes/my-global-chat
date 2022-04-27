@@ -3,7 +3,6 @@
 // require
 const express = require('express');
 const socketIo = require('socket.io')
-const path = require('path');
 
 const app = express();
 
@@ -12,7 +11,7 @@ app.set('port', process.env.PORT || 8080);
 const server = app.listen(app.get('port'));
 const io = socketIo(server, {
     cors: {
-        origin: 'https://bastianparedes.com',
+        origin: '*',
         methods: ['GET']
     }
 });
