@@ -10,11 +10,11 @@ const socket = io('https://my-global-chat.herokuapp.com/');
 
 export default function MainChat() {
 
-    let [chat, setChat]: any = React.useState([]);
+    let [chat, setChat] = React.useState([]);
     let [recievedMessage, setRecievedMessage] = React.useState({className: 'recieved-message', username:'Sistema', message: 'Hola nuevo usuario! Envía tu mensajes para que todo el mundo los vea! :)'});
     let [sendingText, setSendingText] = React.useState('');
     let [username, setUsername] = React.useState('');
-    let messagesSection: any = React.useRef();
+    let messagesSection = React.useRef();
     let scrollBarWasAtBottom = React.useRef(false);
 
 
@@ -47,7 +47,7 @@ export default function MainChat() {
 
 
 
-    let onKeyDown = (event: any) => {
+    let onKeyDown = (event) => {
         if (event.keyCode === 13) {
             event.preventDefault();
         };
@@ -64,7 +64,7 @@ export default function MainChat() {
 
     React.useEffect(() => {
         setUsername(sessionStorage.getItem('username') || '');
-        socket.on('messageFromServer', (data: any) => {
+        socket.on('messageFromServer', (data) => {
             setRecievedMessage({className: 'recieved-message', username: data['username'], message: data['message']});
         });
     }, []);
@@ -92,7 +92,7 @@ export default function MainChat() {
     return (
         <main className={styles['main']}>
             <div className={styles['messages-section']} ref={messagesSection}>
-                {chat.map((info:any, pos:number) => <Message key={pos} className={info.className} username={info.username} message={info.message}/>)}
+                {chat.map((info, pos) => <Message key={pos} className={info.className} username={info.username} message={info.message}/>)}
             </div>
             <div className={styles['send-messages-section']}>
                 <textarea className={styles['sending-text']} placeholder='Mensaje' resize='none' value={sendingText} onChange={event => {setSendingText(event.target.value)}} onKeyDown={onKeyDown}></textarea>
