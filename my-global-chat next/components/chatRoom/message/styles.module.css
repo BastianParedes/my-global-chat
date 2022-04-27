@@ -1,0 +1,54 @@
+
+.message-div {
+    background-color: rgb(23, 162, 255);
+    width: fit-content;
+    max-width: 80%;
+    display: flex;
+    margin: 0.625rem;
+    border-radius: 0.625rem;
+    padding: 0.625rem;
+}
+
+
+/* ARREGLAR */
+.recieved-message {
+    margin-right: auto;
+}
+
+.sended-message {
+    margin-left: auto;
+}
+
+
+
+
+.container-message-text-in-chat {
+    height: 100%;
+    width: fit-content;
+    text-align: justify;
+    line-height: 3rem;
+    font-size: 2rem;
+}
+
+.message-username {
+    display: block;
+    margin-bottom: 0.3125rem;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.message-content {
+    color: rgb(255, 255, 255)
+}
+
+.container-message-hour {
+    margin-top: auto;
+    font-size: 1.6rem;
+    margin-left: 0.625rem;
+}
+
+.message-hour {
+    color: rgb(209, 209, 209)
+}
+
+
