@@ -6,7 +6,7 @@ import Message from '../message';
 
 
 
-let socket: any;
+const socket = io('https://my-global-chat.herokuapp.com/');
 
 export default function MainChat() {
 
@@ -62,18 +62,11 @@ export default function MainChat() {
 
 
 
-    const socketInitializer = async () => {
-        await fetch('/api/socket');
-        socket = io();
-        socket.on('messageFromServer', data => {
-            console.log('mensaje del servidor')
-            setRecievedMessage({className: 'recieved-message', username: data['username'], message: data['message']});
-        });
-    }
-
     React.useEffect(() => {
         setUsername(sessionStorage.getItem('username') || '');
-        socketInitializer();
+        socket.on('messageFromServer', (data: any) => {
+            setRecievedMessage({className: 'recieved-message', username: data['username'], message: data['message']});
+        });
     }, []);
 
 
